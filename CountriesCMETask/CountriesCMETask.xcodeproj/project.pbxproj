@@ -16,6 +16,8 @@
 		DAFB80EE2D3AA8D700E60B4D /* CountriesCMETaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFB80ED2D3AA8D700E60B4D /* CountriesCMETaskTests.swift */; };
 		DAFB80F82D3AA8D700E60B4D /* CountriesCMETaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFB80F72D3AA8D700E60B4D /* CountriesCMETaskUITests.swift */; };
 		DAFB80FA2D3AA8D700E60B4D /* CountriesCMETaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFB80F92D3AA8D700E60B4D /* CountriesCMETaskUITestsLaunchTests.swift */; };
+		DAFB810B2D3ACF4900E60B4D /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFB810A2D3ACF4900E60B4D /* CountriesModel.swift */; };
+		DAFB810E2D3AE0AD00E60B4D /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFB810D2D3AE0AD00E60B4D /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		DAFB80F32D3AA8D700E60B4D /* CountriesCMETaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesCMETaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB80F72D3AA8D700E60B4D /* CountriesCMETaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesCMETaskUITests.swift; sourceTree = "<group>"; };
 		DAFB80F92D3AA8D700E60B4D /* CountriesCMETaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesCMETaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAFB810A2D3ACF4900E60B4D /* CountriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
+		DAFB810D2D3AE0AD00E60B4D /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		DAFB810F2D3AE1E100E60B4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +103,13 @@
 		DAFB80D62D3AA8D500E60B4D /* CountriesCMETask */ = {
 			isa = PBXGroup;
 			children = (
-				DAFB80D72D3AA8D500E60B4D /* CountriesCMETaskApp.swift */,
-				DAFB80D92D3AA8D500E60B4D /* ContentView.swift */,
+				DAFB810F2D3AE1E100E60B4D /* Info.plist */,
+				DAFB810C2D3AE09900E60B4D /* LocationManager */,
+				DAFB81072D3AB9A200E60B4D /* Views */,
+				DAFB81082D3AB9B000E60B4D /* ViewModel */,
+				DAFB81092D3AB9BC00E60B4D /* Model */,
 				DAFB80DB2D3AA8D600E60B4D /* Assets.xcassets */,
-				DAFB80E02D3AA8D600E60B4D /* Persistence.swift */,
-				DAFB80E22D3AA8D600E60B4D /* CountriesCMETask.xcdatamodeld */,
+				DAFB81062D3AB96D00E60B4D /* CoreData */,
 				DAFB80DD2D3AA8D600E60B4D /* Preview Content */,
 			);
 			path = CountriesCMETask;
@@ -131,6 +138,47 @@
 				DAFB80F92D3AA8D700E60B4D /* CountriesCMETaskUITestsLaunchTests.swift */,
 			);
 			path = CountriesCMETaskUITests;
+			sourceTree = "<group>";
+		};
+		DAFB81062D3AB96D00E60B4D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DAFB80D72D3AA8D500E60B4D /* CountriesCMETaskApp.swift */,
+				DAFB80E02D3AA8D600E60B4D /* Persistence.swift */,
+				DAFB80E22D3AA8D600E60B4D /* CountriesCMETask.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		DAFB81072D3AB9A200E60B4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DAFB80D92D3AA8D500E60B4D /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DAFB81082D3AB9B000E60B4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DAFB81092D3AB9BC00E60B4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAFB810A2D3ACF4900E60B4D /* CountriesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAFB810C2D3AE09900E60B4D /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				DAFB810D2D3AE0AD00E60B4D /* LocationManager.swift */,
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +313,9 @@
 			files = (
 				DAFB80E12D3AA8D600E60B4D /* Persistence.swift in Sources */,
 				DAFB80E42D3AA8D600E60B4D /* CountriesCMETask.xcdatamodeld in Sources */,
+				DAFB810E2D3AE0AD00E60B4D /* LocationManager.swift in Sources */,
 				DAFB80DA2D3AA8D500E60B4D /* ContentView.swift in Sources */,
+				DAFB810B2D3ACF4900E60B4D /* CountriesModel.swift in Sources */,
 				DAFB80D82D3AA8D500E60B4D /* CountriesCMETaskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +478,10 @@
 				DEVELOPMENT_TEAM = AV5GMDRZ8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CountriesCMETask/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app need your location to provide best feature based on current location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app need your location to provide best feature based on current location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to provide best feature based on current location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,6 +511,10 @@
 				DEVELOPMENT_TEAM = AV5GMDRZ8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CountriesCMETask/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app need your location to provide best feature based on current location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app need your location to provide best feature based on current location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to provide best feature based on current location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
